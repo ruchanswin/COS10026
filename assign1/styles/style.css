@@ -1,0 +1,535 @@
+/*
+filename: Shane Lin
+author: Shane Lin
+created: 23/08/2023
+last modified: 24/08/2023
+description: lab04.html
+*/
+
+
+/* Global Font Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px; 
+    margin: 0;
+    padding: 0;
+    background-image: url('...images/fb.png');
+    background-size: cover;
+}
+
+/* Default Styles */
+body, h1, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar Styles */
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li:last-child {
+    margin-right: 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: color 0.4s ease;
+}
+
+/* Underline Transition for navigation links */
+nav ul li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: width 0.4s;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+}
+
+/*job.css Styles */
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #1d146e, #1078bd);
+    color: #fff;
+    padding: 15px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.company-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+/* Banner Styles */
+.banner_jobs {
+    width: 100%;
+    height: 38vh;
+    background-color: #005bb9;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../images/office.png");
+    background-position: center;
+    padding: 10px 0;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    color:#ffffff
+}
+
+.banner_index{
+    width: 100%;
+    height: 38vh;
+    background-color: #005bb9;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../images/index_banner.png");
+    background-position: center;
+    padding: 10px 0;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner_about{
+    width: 100%;
+    height: 38vh;
+    background-color: #005bb9;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../images/about.png");
+    background-position: center;
+    padding: 10px 0;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    color:#ffffff;
+}
+
+.banner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.banner-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.banner h1 {
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Aside Styles */
+aside {
+    width: 25%;
+    float: right;
+    padding: 5px;
+    background-color: rgba(65, 65, 66, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #7a7a8d;
+    color: #f7f7f7;
+    text-align: center;
+    margin-right: 10px;
+}
+
+aside p {
+    padding: 20px;
+    font-weight: 550;
+}
+
+/* Job Section Styles */
+.job-section {
+    width: 95%;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 18px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.job-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.job-section ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.job-section .qualification {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.job-section p {
+    text-align: left; /* Align the <p> to the left */
+}
+
+.job-salary .salary {
+    font-weight: bold; /* Make 'salary range' text bold */
+}
+
+/* Apply Now link as a button */
+.apply-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #0073e6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+
+.apply-button:hover {
+    background-color: #005bb9;
+}
+
+.button {
+    text-align: center;
+}
+
+/* FAQ Styles*/
+.faq-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.faq-container h3 {
+    margin-left: 40px;
+}
+
+.faq {
+    width: 90%;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 18px; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq .faq-question {
+    cursor: pointer;
+    margin: 0;
+    padding: 5px;
+    background-color: #f0f0f0;
+}
+
+.faq .faq-answer {
+    display: none;
+    margin: 0;
+    padding: 10px;
+    background-color: #ffffff;
+    text-align: left;
+}
+
+.faq-toggle:checked + .faq-question + .faq-answer {
+    display: block;
+}
+
+.faq {
+    margin-bottom: 20px;
+}
+
+.faq-toggle {
+    display: none;
+}
+/* about.css */
+
+.Groupinfo {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Groupinfo dt {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.Groupinfo dd {
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.aboutus {
+    margin-left: 20px;
+    text-align: center;
+}
+
+.aboutus img {
+    margin: 0 auto; /* Center-align the images horizontally */
+    display: block;
+    box-shadow: 30px 2px 30px rgba(0, 0, 0.1, 0.1);
+}
+
+.timetable{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.timetable table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.timetable td {
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+}
+
+.timetable th {
+    padding: 5px;
+    text-align: center;
+}
+
+/* Index.css */
+
+.banner_index{
+    width: 100%;
+    height: 38vh;
+    background-color: #005bb9;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../images/index_banner.png");
+    background-position: center;
+    padding: 10px 0;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.plans h1 {
+    text-align: center;
+}
+
+.plans h2 {
+    text-align: center;
+}
+
+.awards h2, p {
+    text-align: center;
+}
+
+.promotion h2, p, dl {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.graphics{
+    margin-right: 10px; 
+    text-align: right;
+    text-decoration: none;
+}
+
+.plans{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* enhancements.css Styles */
+.enhancements_info h1{
+    text-align: center;
+}
+.enhancements_info p{
+    text-align: left;
+    margin-left: 20px;
+}
+
+.enhancements_info a{
+    text-align: left;
+    margin-left: 20px;
+}
+
+.enhancements_info img{
+    box-shadow: 30px 2px 30px rgba(0, 0, 0.1, 0.1);
+}
+
+/* Apply.css Styles */
+.app-container {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 20px 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+legend {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box; 
+}
+
+input[type="submit"],
+input[type="reset"] {
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: gray;
+}
+
+.promotion {
+    text-align: center;
+}
+
+th {
+    text-decoration: underline;
+}
+
+#date,
+#work,
+#pos {
+    padding: 10px;
+}
+
+.contacts {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    nav ul li {
+        margin-right: 10px; 
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav a {
+        text-decoration: none;
+    }
+}
+
+/* Footer Styles*/
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 16px;
+    background: linear-gradient(to right, #1d146e, #1078bd);
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav li {
+    display: inline-block; 
+    margin-right: 20px; 
+    margin-bottom: 10px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.4s ease;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact a {
+    display: inline-block;
+    margin: 0 10px; 
+}
+
+.contact p {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.credits {
+    color: #fff;
+}
+
+.footer-logo {
+    width: 50px; 
+    height: 50px; 
+}

@@ -1,0 +1,11 @@
+5/ SELECT make, model
+FROM cars
+WHERE price < 15000;
+
+6/ SELECT AVG(price)
+FROM cars
+WHERE make = 'Ford';
+
+7/ SELECT *
+FROM cars
+WHERE yom >= 2010 AND price >= 15000;

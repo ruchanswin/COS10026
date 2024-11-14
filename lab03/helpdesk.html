@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Help Desk Form">
+  <meta name="keywords" content="HTML Form">
+  <meta name="author" content="Minh Nguyen">
+  <title>CWA Help Desk Appointment</title>
+</head>
+<body>
+<a href="www.swinburne.edu.au"><img src="logo.png" alt="Swinburne University logo"></a>
+<h1>CWA Help Desk Appointment</h1>
+<p>The Help Desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday</p>
+<p>Check Blackboard for when CWA tutors will be there.</p>
+<form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+<fieldset>
+<legend>Student details</legend>
+<p><label for="studentid">Student ID</label>
+<input type="text" id="studentid" name="Student ID" maxlength="10"
+                   pattern = "[0-9]{7,10}"
+                   required = "required">
+</p>
+<label>Given Name <input type="text" name="Given Name" maxlength = "15"
+       pattern = "^[a-zA-Z]+$"
+       required = "required"></label>
+<label>Family Name <input type="text" name="Family Name" maxlength = "15"
+       pattern = "^[a-zA-Z]+$"
+       required = "required"></label>
+</fieldset>
+<fieldset>
+<legend>Your unit</legend>
+<p>
+<label><input type="radio" name="unit"
+value="COS10011" checked="checked" required = "required">
+COS10011</label>
+<label><input type="radio" name="unit"
+value="COS60007">COS60007</label>
+<label><input type="radio" name="unit"
+value="COS60011">COS60011</label>
+</p>
+<p><label for="tutor">Your Tutor</label>
+<select name="tutor" id="tutor">
+<option value="Please Select" selected="selected">Please Select</option>
+<option value="Armita Zarnegar">Armita Zarnegar</option>
+<option value="Jayson Paul">Jayson Paul</option>
+<option value="Kaibin Wang">Kaibin Wang</option>
+<option value="Alfandi Yahya">Alfandi Yahya</option>
+<option value="Fatma Mohammed">Fatma Mohammed</option>
+<option value="Razeen Hashemi">Razeen Hashemi</option>
+<option value="Yi Tian">Yi Tian</option>
+</select>
+</p>
+</fieldset>
+<fieldset>
+<legend>Issue</legend>
+<p>
+<label><input type="checkbox" name="issue"
+value="HTML" checked="checked">
+HTML</label>
+<label><input type="checkbox" name="issue"
+value="CSS">CSS</label>
+<label><input type="checkbox" name="issue"
+value="JS">JavaScript</label>
+<label><input type="checkbox" name="issue"
+value="Php">PHP</label>
+<label><input type="checkbox" name="issue"
+value="SQL">MySQL</label>
+</p>
+<p><label>Description of Issue<br>
+<textarea name=" des of issue"
+rows="10" cols="50"
+ placeholder = "Write a description of your problem here...">
+</textarea>
+</label></p>
+</fieldset>
+<fieldset>
+<legend>Preferred Date / Time</legend>
+<p><label>Date
+<input type="text" name="bday" 
+ placeholder = "dd/mm/yyyy"
+ pattern="\d{1,2}\/\d{1,2}\/\d{4}"
+ required="required">
+</label></p>
+<p><label>Time
+<input type="text" name="24h"
+ placeholder = "00:00"
+ pattern="([01]?[0-9]|2[0-3]):[0-5][0-9]"
+ required ="required">
+</label></p>
+</fieldset>
+<input type= "submit" value="Book">
+<input type= "reset" value="Reset Form">
+</form>
